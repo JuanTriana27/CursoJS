@@ -1,0 +1,2 @@
+¿Qué es JS?
+JS es un lenguaje de programación, pero para entenderlo necesitamos saber como funciona internet.

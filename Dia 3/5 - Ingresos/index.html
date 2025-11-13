@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+
+    <h1>Ingresa tu nombre</h1>
+    <input type="text" id="inputTexto">
+
+    <h1>Ingresa tu edad</h1>
+    <input type="number" id="inputNumero">
+
+    <h1>Ingresa tu ciudad</h1>
+    <input type="text" id="inputCiudad">
+
+    <h1 id = "salida">Quien eres?</h1>
+
+    <button onclick="mostrarDatos()">Mostrar Datos</button>
+
+</body>
+
+<script>
+
+    function mostrarDatos() {
+        let miNombre;
+        let miEdad;
+        let miCiudad;
+        let elementoTexto;
+        
+        miNombre = document.getElementById("inputTexto").value;
+        miEdad = document.getElementById("inputNumero").value;
+        miCiudad = document.getElementById("inputCiudad").value;
+        elementoTexto = document.getElementById("salida");
+
+        let mensaje = "Mi nombre es " + miNombre + ", tengo " + miEdad + " años y vivo en " + miCiudad + ".";
+
+        elementoTexto.textContent = mensaje;
+
+    }
+
+</script>
+
+</html>

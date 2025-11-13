@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id = "time">
+
+    <button onclick="ComenzarTime()">Alarma</button>
+
+    <h1 id = "textoAlarma" style="color: red;">OFF</h1>
+
+</body>
+
+<script>
+
+    let elementoSeg = document.getElementById("time")
+    let elementoTextoAlarma = document.getElementById("textoAlarma");
+
+    function ComenzarTime() {
+        setTimeout(tiempoCumplido, 1000 * elementoSeg.value)
+    }
+
+    function tiempoCumplido() {
+        elementoTextoAlarma.textContent = "ON";
+        elementoTextoAlarma.style.color = "green";
+    }
+    
+    // Actividad
+    setTimeout(function() { alert("Se acabo el tiempo") }, 5000);
+
+    // 2
+    setTimeout(function() { alert("Se acabo el tiempo") }, 10000);
+</script>
+
+</html>

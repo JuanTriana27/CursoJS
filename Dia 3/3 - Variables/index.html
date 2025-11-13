@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+
+<body>
+
+    <h1>Ingresa tu nombre</h1>
+    <input type="text" id="inputTexto">
+
+    <h1>Ingresa tu edad</h1>
+    <input type="number" id="inputNumero">
+
+    <h1>Ingresa tu ciudad</h1>
+    <input type="text" id="inputCiudad">
+
+    <button onclick="mostrarDatos()">Mostrar Datos</button>
+
+</body>
+
+<script>
+    let miNombre;
+    let miEdad;
+    let miCiudad;
+
+    function mostrarDatos() {
+        miNombre = document.getElementById("inputTexto").value;
+        miEdad = document.getElementById("inputNumero").value;
+        miCiudad = document.getElementById("inputCiudad").value;
+
+        alert("Mi nombre es " + miNombre + ", tengo " + miEdad + " años y vivo en " + miCiudad + ".");
+
+        if (miEdad < 18) {
+            alert("Soy menor de edad.");
+        } else {
+            alert("Soy mayor de edad.");
+        }
+    }
+
+    let pelicula = "Pulp Fiction";
+    let hora = "21:00";
+
+    function test() {
+        alert("La funcion de " + pelicula + " es a las " + hora);
+    }
+
+    let fruta = "manzanas";
+    let precio = "100"
+    function test() {
+        alert("Las " + fruta + " cuestan $" + precio)
+    }
+
+</script>
+
+</html>

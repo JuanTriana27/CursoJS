@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Preguntas -->
+    <h1>Juego de 30 segundos</h1>
+
+    <button onclick="iniciarJuego()">Iniciar Juego</button>
+    <div id="preguntas" style="display: none;">
+        <label>Pregunta 1: ¿Capital de Francia?</label>
+        <input type="text" id="pregunta1"><br>
+
+        <label>Pregunta 2: ¿5 + 3?</label>
+        <input type="text" id="pregunta2"><br>
+
+        <label>Pregunta 3: ¿Color del cielo?</label>
+        <input type="text" id="pregunta3"><br>
+
+        <label>Pregunta 4: ¿Día de la semana después de lunes?</label>
+        <input type="text" id="pregunta4"><br>
+
+        <label>Pregunta 5: ¿Número de patas de un perro?</label>
+        <input type="text" id="pregunta5"><br>
+
+        <button onclick="finalizarJuego()">Finalizar Juego</button>
+</body>
+
+<script>
+
+    let tiempoLimite = 3;
+    let timer;
+
+    function iniciarJuego() {
+        document.getElementById("preguntas").style.display = "block";
+        timer = setTimeout(finDelJuego, tiempoLimite * 1000);
+    }
+
+    function finalizarJuego() {
+        clearTimeout(timer);
+        alert("¡Juego finalizado! Verificando respuestas...");
+    }
+
+    function finDelJuego() {
+        alert("¡Tiempo terminado! Game Over.");
+        reiniciarJuego();
+    }
+
+    function reiniciarJuego() {
+        // Recargar pagina
+        location.reload();
+    }
+</script>
+
+</html>

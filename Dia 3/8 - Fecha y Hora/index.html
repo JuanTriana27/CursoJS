@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    audio::-webkit-media-controls-panel {
+        background-color: rgb(21, 157, 199);
+    }
+</style>
+
+<body onload="comenzarReloj()">
+
+    <input type="number" name="" id="tiempoElegido">
+
+    <button onclick="comenzarTime()">Alarma</button>
+
+    <h1 id="textoAlarma" style="color: red;">00:00:00</h1>
+
+    <audio controls>
+        <source src="alarma.mp3" type="audio/mpeg">
+        Sonido no Habilitado
+    </audio>
+
+</body>
+
+<script>
+    let elementosSeg = document.getElementById("tiempoElegido");
+    let textoAlarma = document.getElementById("textoAlarma");
+    let elementoSonido = document.getElementById("audioAlarma");
+
+    function comenzarTime() {
+        setTimeout(tiempoCumplido, 1000 * elementosSeg.value);
+    }
+
+    function tiempoCumplido() {
+        textoAlarma.style.color = "green";
+        elementoSonido.play();
+    }
+
+    function comenzarReloj() {
+        setInterval(tictac, 1000);
+    }
+
+    function tictac() {
+        let tiempoActual = new Date();
+        let horas = tiempoActual.getHours();
+        let minutos = tiempoActual.getMinutes();
+        let segundos = String(tiempoActual.getSeconds()).padStart(2, '0');
+
+        let textoHora = horas + ":" + minutos + ":" + segundos;
+
+        textoAlarma.textContent = textoHora;
+    }
+
+    // Muestre en un alert, la fecha del dia de hoy con el formato DD/MM/YYYY. Para ello debe usar la función toLocaleDateString('es-ES') que proporciona el objeto Date.
+    function mostrarFecha() {
+        let fechaActual = new Date();
+        alert(fechaActual.toLocaleDateString('es-ES'));
+    }
+
+    // Dado el código brindado, declarar (fuera de la función) un intervalo que ejecute la función test cada 1 segundo.
+    function test() {
+        console.log("+1 segundo");
+    }
+
+    setInterval(test, 1000);
+
+</script>
+
+</html>
