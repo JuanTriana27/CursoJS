@@ -1,0 +1,40 @@
+/* - Vas a crear a menos 2 clases distintas a las que les darás un estilo particular
+- Vas a crear tantas etiquetas div como creas necesarias, procurando agrupar conjuntos de elementos a los que les darás su propio estilo.
+- Vas a reemplazar todas las etiquetas de formato HTML (como negritas, cursivas, etc.) por etiquetas SPAN, a las que les darás un nombre de clase que te permita pasarle un estilo.
+- Vas a usar los 3 tipos de selectores básicos que hemos visto (de tipo, clase y de ID) y también selectores de atributo, de pseudo-clase y de pseudo-elemento.
+- Y por último vas a incluir, en cualquiera de esos selectores mencionados, al menos un combinador. */
+
+/* Estilo para la clase de texto destacado */
+.destacado {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Estilo para la clase de texto resaltado */
+.resaltado {
+    font-style: italic;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para los divs con clase contenedor */
+.contenedor {
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Estilo para los divs con ID principal */
+#principal {
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+/* Estilo para los spans dentro de divs con clase contenedor */
+.contenedor span {
+    color: #007bff;
+}
+
+/* Estilo para los enlaces al pasar el cursor */
+a:hover {
+    text-decoration: underline;
+}
